@@ -17,9 +17,10 @@ function fetchData() {
 function renderTable() {
     const tableBody = document.querySelector('#teamsTable tbody');
     tableBody.innerHTML = '';
-    teamsData.forEach(team => {
+    teamsData.forEach((team, index) => {
         const row = document.createElement('tr');
         row.innerHTML = `
+            <td>${index + 1}</td>
             <td>${team.name}</td>
             <td>${team.conference}</td>
             <td>${team.wins}-${team.losses}</td>

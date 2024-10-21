@@ -7,8 +7,9 @@ import json
 from collections import defaultdict
 import random
 import numpy as np
+import os
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=os.path.abspath('.'))
 
 # Database connection function
 def get_db_connection():
